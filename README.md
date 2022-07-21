@@ -24,5 +24,11 @@ Pull requests are welcome. For bug reports, please open an issue
 * (Done) Spam a lot
 * (In-progress) Add a way to change the amount of requests
 * (In-progress) Add proxy support
+## Sponsoring
+You can sponsor me on:
+
+- [Coffeebde.ir](https://coffeebede.ir/ghalbeyou)
+- [IDPay](https://idpay.ir/ghalbeyougu)
+- [BuyMeACoffe](https://www.buymeacoffee.com/Ghalbeyou)
 ## License
 This program is under the Apache 2.0 license.
