@@ -1,6 +1,6 @@
 # WebHook Bomber
 ![Shields](https://img.shields.io/github/v/release/ghalbeyou/webhook-bomber?include_prereleases)
-![Shields](https://img.shields.io/github/license/ghalbeyou/webhook-bomb)
+![Shields](https://img.shields.io/github/license/ghalbeyou/webhook-bomber)
 
 A simple tool to send a large amount of requests to a discord webhook.
 Discord webhook bomber! built with python
