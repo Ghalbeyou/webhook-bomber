@@ -2,8 +2,9 @@ import os
 import random
 import threading
 from time import sleep
-import discord_webhook
-print(""""
+import requests
+
+print(f"""
 ,,,,,,,,,,,,,,,,,,,,,***,,,.,,,***,,,,,,,**********,,,,,*****,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,**,,,,,**,,,,,,,,,******,,,,,,****************,,,,,,,,,,,,,,,**
 ,,,,,,,,,,,,,,,,,,*,,,*****,,,****,*,,***********************,**,,,,,,,,***,,,**
@@ -36,25 +37,26 @@ print(""""
 ********,,**/(#%%&&&&&&&&&&&&&%(/(#%%&&&&&&&&@&%(**,/(/*/#&@@@&&&&&&&&%%%##%%%%%
 ******//((##%%&&&&&&&&@&&&&@@&&%#((#%&&@&%&&&&%(/*(%#(##&@@&&&&&&&&%%%%%%%####%%
 ///(((((((#%&&&&@@@@@@&&&&&%######%%%%%&%%(/(#####%&&&&&&&&&&&&&%%%%%%%########%
-""""")
-print("\nGhalbeyou Presents ...")
-sleep(5)
+Ghalbeyou presents ...
+""")
+sleep(2)
 os.system("cls")
-link = input("Enter your webhook link: ")
-webhook = discord_webhook.DiscordWebhook(link)
-message = input("Enter your message: ")
-def do_spam():
-    for i in range(0, 100):
-        webhook.set_content(f"@here\n{message}")
-        webhook.username = random.randint(1, 999999)
-        a = webhook.execute()
-        if a.status_code != 200:
-            print("Rate limited")
-            sleep(15000)
-        print(f"Message sent.")
-        do()
-def do():
-    while True:
-        t = threading.Timer(function=do_spam, interval=1)
-        t.start()
-do()
+# load up the main
+LINK = input("Enter the discord webhook url: ")
+sleep(2)
+os.system("cls")
+MSG = input("Enter the message you want to spam with mention everyone: ")
+print("Starting to spam...")
+sleep(2)
+os.system("cls")
+def send_message(link, msg):
+    print(f"Sending message ...")
+    try:
+        requests.post(link, data={"content": f"@here\n{msg}", "username": random.randint(123, 12318248124)})
+        print("Message sent!")
+    except:
+        pass
+while True:
+    t = threading.Thread(target=send_message, args=(LINK, MSG))
+    t.start()
+
