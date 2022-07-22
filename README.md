@@ -10,6 +10,10 @@ With this app, you can **BOMB** a channel in discord with webhook!
 Completely free!
 ### 🎉 If you liked this repo, please give me a star on [GitHub](https://github.com/Ghalbeyou/webhook-bomber)
 ### ⚠️ WARNING! ⚠️ Please do not run this program on your computer and we are not responsible for your misuse of this program!
+## Whats new?
+- Faster spam (5 message every second) in vps
+- Better error handling
+- Better user experience
 ## Install
 ```bash
 $ gh repo clone Ghalbeyou/webhook-bomber
